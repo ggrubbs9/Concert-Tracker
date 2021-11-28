@@ -1,6 +1,6 @@
-import React, { ReactElement } from "react";
 import { useDocument } from "react-firebase-hooks/firestore";
 import firebase from "../firebase/clientApp.ts";
+import Image from "next/image";
 
 export default function VoterList({ id, vote }) {
   const [value, loading, error] = useDocument(
@@ -24,7 +24,10 @@ export default function VoterList({ id, vote }) {
         alignItems: "center",
       }}
     >
-      <img
+      <Image
+        alt="profile photo"
+        width="30px"
+        height="30px"
         style={{
           borderRadius: "50%",
           maxHeight: "48px",
