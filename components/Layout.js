@@ -17,6 +17,9 @@ function LayoutComponent({ children }) {
       case 1:
         router.push("/auth");
         break;
+      case 2:
+        router.push("/about");
+        break;
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [value]);
@@ -34,6 +37,7 @@ function LayoutComponent({ children }) {
       >
         <BottomNavigationAction label="Recents" icon={<RestoreIcon />} />
         <BottomNavigationAction label="Favorites" icon={<FavoriteIcon />} />
+        <BottomNavigationAction label="About" icon={<FavoriteIcon />} />
       </BottomNavigation>
     </div>
   );
